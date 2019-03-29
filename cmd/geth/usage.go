@@ -81,6 +81,8 @@ var AppHelpFlagGroups = []flagGroup{
 			utils.EthStatsURLFlag,
 			utils.IdentityFlag,
 			utils.LightServFlag,
+			utils.LightBandwidthInFlag,
+			utils.LightBandwidthOutFlag,
 			utils.LightPeersFlag,
 			utils.LightKDFFlag,
 			utils.WhitelistFlag,
@@ -137,7 +139,6 @@ var AppHelpFlagGroups = []flagGroup{
 			utils.CacheDatabaseFlag,
 			utils.CacheTrieFlag,
 			utils.CacheGCFlag,
-			utils.TrieCacheGenFlag,
 		},
 	},
 	{
@@ -224,16 +225,8 @@ var AppHelpFlagGroups = []flagGroup{
 		}, debug.Flags...),
 	},
 	{
-		Name: "METRICS AND STATS",
-		Flags: []cli.Flag{
-			utils.MetricsEnabledFlag,
-			utils.MetricsEnableInfluxDBFlag,
-			utils.MetricsInfluxDBEndpointFlag,
-			utils.MetricsInfluxDBDatabaseFlag,
-			utils.MetricsInfluxDBUsernameFlag,
-			utils.MetricsInfluxDBPasswordFlag,
-			utils.MetricsInfluxDBTagsFlag,
-		},
+		Name:  "METRICS AND STATS",
+		Flags: metricsFlags,
 	},
 	{
 		Name:  "WHISPER (EXPERIMENTAL)",

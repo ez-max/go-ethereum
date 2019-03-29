@@ -93,6 +93,8 @@ var (
 		utils.ExitWhenSyncedFlag,
 		utils.GCModeFlag,
 		utils.LightServFlag,
+		utils.LightBandwidthInFlag,
+		utils.LightBandwidthOutFlag,
 		utils.LightPeersFlag,
 		utils.LightKDFFlag,
 		utils.WhitelistFlag,
@@ -100,7 +102,6 @@ var (
 		utils.CacheDatabaseFlag,
 		utils.CacheTrieFlag,
 		utils.CacheGCFlag,
-		utils.TrieCacheGenFlag,
 		utils.ListenPortFlag,
 		utils.MaxPeersFlag,
 		utils.MaxPendingPeersFlag,
@@ -136,7 +137,6 @@ var (
 		utils.RPCCORSDomainFlag,
 		utils.RPCVirtualHostsFlag,
 		utils.EthStatsURLFlag,
-		utils.MetricsEnabledFlag,
 		utils.FakePoWFlag,
 		utils.NoCompactionFlag,
 		utils.GpoBlocksFlag,
@@ -173,6 +173,8 @@ var (
 	}
 
 	metricsFlags = []cli.Flag{
+		utils.MetricsEnabledFlag,
+		utils.MetricsEnabledExpensiveFlag,
 		utils.MetricsEnableInfluxDBFlag,
 		utils.MetricsInfluxDBEndpointFlag,
 		utils.MetricsInfluxDBDatabaseFlag,
